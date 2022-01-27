@@ -5,8 +5,9 @@
 
 int main(int argc, char** argv) {
   /* Print Version and Exit Information */
-  puts("Lithp Version 0.0.0.2");
-  puts("Press Ctrl+c to Exit\n");
+  puts("\x1b[1;31mLithp\x1b[0m - Version 0.0.0.3");
+  puts("A LISP inspired by the courage and bravery of Mike Tyson");
+  puts("Press Ctrl+c at anytime to exit\n");
 
   // In a endless loop...
   while(1) {
