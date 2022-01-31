@@ -13,11 +13,12 @@ int main(int argc, char** argv) {
 
   // Define the parsers in the context of the lithp language
   mpca_lang(MPCA_LANG_DEFAULT,
-  "                                                            \
-    number     : /-?[0-9]+/ ;                                   \
-    operator   : '+' | '-' | '*' | '/' ;                       \
+            "                                                            \
+    number     : /-?[0-9]+/ ;                                  \
+    operator   : '+' | '-' | '*' | '/' | '%'                   \
+               | /add/ | /sub/ | /mul/ | /div/ | /mod/ ;       \
     expression : <number> | '(' <operator> <expression>+ ')' ; \
-    lithp      : /^/ <operator> <expression>+ /$/ ;                       \
+    lithp      : /^/ <operator> <expression>+ /$/ ;            \
   ",
   Number, Operator, Expression, Lithp);
 
